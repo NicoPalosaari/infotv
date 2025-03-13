@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="top-left" class="corner top-left">
+
+            <img src="" id="imagePlayer" class="SAMMAKKO" alt="SAMMAKKO">
+        </div>
+
+        <div class="corner top-right" >
+            
+            <object data="https://mealdoo.com/fi/week/luovi/ravintolakasarmi/ravintolakasarmi?weekend=false&theme=light--red" width="100%" height="100%">
+                sigma
+            </object>
+
+        </div>
+            
+            <div id="content"></div>
+                
+            <script>
+                function loadHTML() {
+                    fetch('/load-page') // Replace with your local file path
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById('content').innerHTML = data;
+                        })
+                        .catch(error => console.error('Error loading file:', error));
+                    }
+            </script>
+        </div>
+
+        <div class="bottom" id="bottom">
+
+
+            <div class="weather_time_day_joke">
+                <p class="week_day" id="week_day">day</p>
+                <p class="day_in_numbers" id="day_in_numbers">##.##.##</p>
+                <h1 class="digiclock" id="digiclock">CLOCK</h1>
+
+                <p class="weather_now" id="weather_now">weather</p>
+                <br>
+                <p class="uv_radiation" id="uv_radiation">UV</p>
+
+                <img src="{{url_for('static', filename='media/Fire.webp')}}" class="fireball" id="fireBall" alt="">
+
+                <h2 class="setup" id="setup"></h2>
+                <h1 class="delivery" id="punchline"></h1>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<script src="{{ url_for('static', filename='mediaplayer_script.js')}}"></script>
+<script src="{{ url_for('static', filename='weather.js')}}"></script>
+<script src="{{ url_for('static', filename='clock.js')}}"></script>
+<script src="{{ url_for('static', filename='joke.js')}}"></script>
+
+</html>

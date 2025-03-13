@@ -1,0 +1,119 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 4;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: auto;
+    background-color: rgb(203, 202, 202);
+}
+
+.corner {
+    width: 50vw;
+    height: 50vh;
+    outline: auto;
+    position: fixed;
+}
+
+.top-left {
+    top: 0;
+    left: 0;
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+}
+
+.bottom {
+    width: 100vw;
+    height: 50vh;
+    outline: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Keeps content centered */
+
+}
+.SAMMAKKO {
+    width: 100%;
+    height: 100%;
+}
+
+.digiclock {
+    font-size: 100px;
+}
+
+.weather_now {
+    transform: scale(2);
+}
+
+.week_day {
+    transform: scale(2.5);
+}
+
+.weather_time_day_joke {
+    display: grid;
+    justify-items: center;
+    position: absolute;
+
+}
+
+.uv_radiation {
+    transform: scale(1.5);
+    padding-bottom: 20px;
+}
+
+.setup {
+    position: relative;
+    
+}
+
+.delivery {
+    position: relative;
+    
+}
+
+.fireball {
+    transform: rotate(-50deg);
+    position: absolute;
+    left: -500px;
+}
+
+.day_in_numbers {
+    transform: scale(1.5);
+    padding: 20px;
+}
+
+
+/* LIST */
+.list {
+    width: 700px;
+    height: 95%;
+    background-color: white;
+    outline: auto;
+
+    position: absolute;
+    right: 6px; /* Positions it to the left */
+}
+
+
+.corner
+
+.pallo {
+    background-color: black;
+    width: 40px;
+    height: 40px;
+
+    
+}
